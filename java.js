@@ -2,6 +2,7 @@ const envelope = document.getElementById("envelope");
 const invitation = document.getElementById("invitation");
 const clickText = document.querySelector(".click-text");
 const music = document.getElementById("music");
+const mapContainer = document.querySelector('.map-container'); // Находим карту
 
 envelope.addEventListener("click", () => {
     // анимация конверта
@@ -13,6 +14,7 @@ envelope.addEventListener("click", () => {
         envelope.style.display = "none";
         clickText.style.display = "none";
         invitation.classList.remove("hidden");
+        mapContainer.classList.remove('hidden');
         invitation.classList.add("show");
 
         music.play();

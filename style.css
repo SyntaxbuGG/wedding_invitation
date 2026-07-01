@@ -132,6 +132,7 @@ body {
     margin: 20px auto;
     line-height: 1.7;
     font-size: 22px;
+    margin-bottom: 100px;
 }
 
 @media (max-width: 480px) {
@@ -175,9 +176,10 @@ body {
 }
 
 
-#child {
+/* #child {
     width: 150px;
     height: auto;
+    margin: 20px 0;
 }
 
 @media (max-width: 480px) {
@@ -185,9 +187,20 @@ body {
         width: 200px;
         height: auto;
     }
+} */
+
+#child {
+    width: 100%;          /* Картинка будет гибкой и сможет сжиматься на маленьких экранах */
+    max-width: 150px;     /* Но на больших экранах она не растянется больше, чем на 150px */
+    height: auto;         /* Пропорции сохраняются автоматически */
+    margin: 20px auto;    /* Центрирует картинку по горизонтали (если родителю задан text-align: center) */
+    display: block;       /* Убирает лишние отступы снизу и позволяет работать margin: auto */
 }
 
 
+#invitation {
+    padding-bottom: 100px;
+}
 
 #invitation h2 {
     font-family: "Emilys Candy", serif;
@@ -196,6 +209,7 @@ body {
     color: #8b6b3f;
     font-style: normal;
     white-space: nowrap;
+    margin: 30px;
 }
 
 @media (max-width: 480px) {
@@ -203,6 +217,8 @@ body {
         font-size: 40px;
     }
 }
+
+
 
 #invitation h3 {
     margin: 25px auto;
@@ -213,4 +229,36 @@ body {
     font-family: "Emilys Candy", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+
+#invitation p.wish {
+    margin: 5px auto;
+    /* Заменит и верхний/нижний, и боковые отступы */
+}
+
+
+
+
+
+#calendar {
+    width: 100%;
+    /* Занимает всю доступную ширину контейнера */
+    max-width: 480px;
+    /* Но не растягивается больше, чем на 480px (или любой ваш максимум) */
+    height: auto;
+    /* Высота подстраивается автоматически */
+    box-sizing: border-box;
+    /* Чтобы паддинги и границы не ломали размер */
+}
+
+#bal {
+    width: 100%;
+    /* Занимает всю доступную ширину контейнера */
+    max-width: 480px;
+    /* Но не растягивается больше, чем на 480px (или любой ваш максимум) */
+    height: auto;
+    /* Высота подстраивается автоматически */
+    box-sizing: border-box;
+    /* Чтобы паддинги и границы не ломали размер */
 }
