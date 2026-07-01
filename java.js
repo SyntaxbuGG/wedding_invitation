@@ -1,5 +1,6 @@
 const envelope = document.getElementById("envelope");
 const invitation = document.getElementById("invitation");
+const clickText = document.querySelector(".click-text");
 const music = document.getElementById("music");
 
 envelope.addEventListener("click", () => {
@@ -10,12 +11,12 @@ envelope.addEventListener("click", () => {
     // показать приглашение
     setTimeout(() => {
         envelope.style.display = "none";
+        clickText.style.display = "none";
+        invitation.classList.remove("hidden");
         invitation.classList.add("show");
 
-        // запуск музыки
         music.play();
 
-        // плавная прокрутка
         invitation.scrollIntoView({
             behavior: "smooth"
         });
@@ -23,7 +24,7 @@ envelope.addEventListener("click", () => {
 });
 
 
-const weddingDate = new Date("2026-07-09T18:00:00").getTime();
+const weddingDate = new Date("2026-07-09T14:00:00").getTime();
 
 setInterval(() => {
     const now = new Date().getTime();

@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение на свадьбу</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,12 +18,14 @@
     <section class="hero">
         <h3 class="intro">✨ Вы приглашены на свадьбу ✨</h2>
             <img id="envelope" src="images/evelope.jpg" alt="Конверт">
-
+            <p class="click-text">Нажмите на Конверт</p>
             <div id="invitation" class="hidden">
-                <h1>Жамшидбек & Жамила</h1>
+                <h2>Jamshid & Jamila</h2>
+                <img id="child" src="images/jamila_jamshid.png" alt="Детство">
                 <p>Будем счастливы разделить с вами один из самых важных дней нашей жизни.
                 </p>
                 <h2>9 июля 2026</h2>
+
 
                 <div id="countdown">
                     <div><span id="days">0</span><small>дней</small></div>
@@ -27,8 +33,16 @@
                     <div><span id="minutes">0</span><small>минут</small></div>
                     <div><span id="seconds">0</span><small>секунд</small></div>
                 </div>
-                <h3>До нашего праздника осталось</h3>
 
+                <h3>До нашего праздника осталось</h3>
+                <h2>Место торжества</h2>
+                <p>Город Андижан свадебьный зал Район2, ориентир: напротив клиники импульс</p>
+                <div class="map-container">
+                    <iframe
+                        src="https://yandex.uz/map-widget/v1/?ll=72.352487%2C40.765895&mode=search&oid=120418588767&ol=biz&z=12.53"
+                        width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative;">
+                    </iframe>
+                </div>
             </div>
 
             <audio id="music" src="music/music.mp3"></audio>
